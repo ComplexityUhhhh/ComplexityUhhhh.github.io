@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kart</title>
+<link rel="stylesheet" href="CSSForMost.css">
+<style>
+    .nativeAmericanStyleJaket {
+        display: none;
+        position: relative;
+        background-color: #b3c1df;
+        margin-left: 25%;
+        margin-top: 100px;
+        width: 50%;
+    }
+    .HollyWoodShirt {
+        display: none;
+        position: relative;
+        background-color: #b3c1df;
+        margin-left: 25%;
+        width: 50%;
+    }
+    .TheRing {
+        display: none;
+        position: relative;
+        background-color: #b3c1df;
+        margin-left: 25%;
+        width: 50%;
+    }
+    .ArtWork {
+        display: none;
+        position: relative;
+        background-color: #b3c1df;
+        margin-left: 25%;
+        width: 50%;
+    }
+    .DecorativeKnife {
+        display: none;
+        position: relative;
+        background-color: #b3c1df;
+        margin-left: 25%;
+        width: 50%;
+    }
+</style>
+</head>
+<body>
+  <div id="Contine Shopping Button">
+    <a href="HomePage.html">
+      <div style="height: 100px; width: 200px; background-color: #b3c1df">
+          <h2>Continue Shopping</h2>
+      </div>
+    </a>
+  </div>
+    <div id="cart-items">
+        <script>
+                function IncreaseNumber(idType) {
+                    var inputField = document.getElementById(idType);
+                    var currentValue = parseInt(inputField.value);
+                    inputField.value = currentValue + 1;
+                }
+                function DecreaseNumber(idType) {
+                    var inputField = document.getElementById(idType);
+                    var currentValue = parseInt(inputField.value);
+                    if (currentValue > 1) {
+                        inputField.value = currentValue - 1;
+                    }
+                }
+        </script>
+        <div id="NativeAmericanStyleJacket" class="nativeAmericanStyleJaket">
+            <img src="images/Screenshot_20220530-113601_Chrome.jpg" width="200px;" height="250px;" alt="Jacket">
+            <input type="button" onclick="DecreaseNumber('jaket')" value="-" style="position: absolute; margin-left: 200px; margin-top: 200px; width: 50px;">
+            <input type="number" id="jaket" value="1" style="position: absolute; width: 30px; margin-top: 200px; margin-left: 250px;">
+            <input type="button" onclick="IncreaseNumber('jaket')" value="+" style="position: absolute; margin-left: 315px; margin-top: 200px; width: 50px;">
+            <input type="button" onClick="TurnOffDiv('NativeAmericanStyleJacket')" value="Remove" style="position: absolute; margin-left: 600px; margin-top: 100px; width: 100px;" >
+        </div>
+        <br>
+        <div id="HollyWoodTshirt" class="HollyWoodShirt">
+            <img src="images/IMG_20240202_233141.jpg" width="200px;" height="250px;" alt="Holly Wood Shirt">
+            <input type="button" onclick="DecreaseNumber('hollywood')" value="-" style="position: absolute; margin-left: 200px; margin-top: 200px; width: 50px;">
+            <input type="number" id="hollywood" value="1" style="position: absolute; width: 30px; margin-top: 200px; margin-left: 250px;">
+            <input type="button" onclick="IncreaseNumber('hollywood')" value="+" style="position: absolute; margin-left: 315px; margin-top: 200px; width: 50px;">
+            <input type="button" onClick="TurnOffDiv('HollyWoodTshirt')" value="Remove" style="position: absolute; margin-left: 600px; margin-top: 100px; width: 100px;" >
+        </div>
+        <br>
+        <div id="TheRing" class="TheRing">
+            <img src="images/20200719_205142.jpg" width="200px;" height="250px;" alt="Ring">
+            <input type="button" onclick="DecreaseNumber('theRing')" value="-" style="position: absolute; margin-left: 200px; margin-top: 200px; width: 50px;">
+            <input type="number" id="theRing" value="1" style="position: absolute; width: 30px; margin-top: 200px; margin-left: 250px;">
+            <input type="button" onclick="IncreaseNumber('theRing')" value="+" style="position: absolute; margin-left: 315px; margin-top: 200px; width: 50px;">
+            <input type="button" onClick="TurnOffDiv('TheRing')" value="Remove" style="position: absolute; margin-left: 600px; margin-top: 100px; width: 100px;" >
+        </div>
+        <br>
+        <div id="ArtWork" class="ArtWork">
+            <img src="images/IMG_20240202_233117.jpg" width="200px;" height="250px;" alt="Ring">
+            <input type="button" onclick="DecreaseNumber('art')" value="-" style="position: absolute; margin-left: 200px; margin-top: 200px; width: 50px;">
+            <input type="number" id="art" value="1" style="position: absolute; width: 30px; margin-top: 200px; margin-left: 250px;">
+            <input type="button" onclick="IncreaseNumber('art')" value="+" style="position: absolute; margin-left: 315px; margin-top: 200px; width: 50px;">
+            <input type="button" onClick="TurnOffDiv('ArtWork')" value="Remove" style="position: absolute; margin-left: 600px; margin-top: 100px; width: 100px;" >
+        </div>
+        <br>
+        <div id="DecorativeKnife" class="DecorativeKnife">
+            <img src="images/IMG_20240202_233125.jpg" width="200px;" height="250px;" alt="Ring">
+            <input type="button" onclick="DecreaseNumber('Knife')" value="-" style="position: absolute; margin-left: 200px; margin-top: 200px; width: 50px;">
+            <input type="number" id="Knife" value="1" style="position: absolute; width: 30px; margin-top: 200px; margin-left: 250px;">
+            <input type="button" onclick="IncreaseNumber('Knife')" value="+" style="position: absolute; margin-left: 315px; margin-top: 200px; width: 50px;">
+            <input type="button" onClick="TurnOffDiv('DecorativeKnife')" value="Remove" style="position: absolute; margin-left: 600px; margin-top: 100px; width: 100px;">
+        </div>
+      </div>
+  <script>
+    // Check if the 'NativeAmericanStyleJacket' item is set to true in local storage
+        var NativeAmericanStyleJacket = localStorage.getItem('NativeAmericanStyleJacket');
+        var HollyWoodTshirt = localStorage.getItem('HollyWoodTshirt');
+        var TheRing = localStorage.getItem('TheRing');
+        var ArtWork = localStorage.getItem('ArtWork');
+        var DecorativeKnife = localStorage.getItem('DecorativeKnife');
+         
+        if (NativeAmericanStyleJacket === 'true') {
+            var div = document.getElementById("NativeAmericanStyleJacket");
+            div.style.display = "block";
+        }
+        else {
+            var div = document.getElementById("NativeAmericanStyleJacket");
+            div.style.display = "none";
+        }
+      
+        if (HollyWoodTshirt === 'true') {
+            var div = document.getElementById("HollyWoodTshirt");
+            div.style.display = "block";
+        }
+        else {
+          var div = document.getElementById("HollyWoodTshirt");
+            div.style.display = "none";
+        }
+        if (TheRing === 'true') {
+            var div = document.getElementById("TheRing");
+            div.style.display = "block";
+        }
+        else {
+          var div = document.getElementById("TheRing");
+          div.style.display = "none";
+        }
+      
+        if (ArtWork === 'true') {
+            var div = document.getElementById("ArtWork");
+            div.style.display = "block";
+        }
+        else {
+          var div = document.getElementById("ArtWork");
+          div.style.display = "none";
+        }
+      
+        if (DecorativeKnife === 'true') {
+            var div = document.getElementById("DecorativeKnife");
+            div.style.display = "block";
+        }
+        else {
+          var div = document.getElementById("DecorativeKnife");
+          div.style.display = "none";
+        }
+      
+      
+        function TurnOffDiv(divName) {
+            localStorage.setItem(divName, 'false');
+            var div = document.getElementById(divName);
+            div.style.display = "none";
+        }
+  </script>
+
+  <div id="Purchase Button">
+  </div>
+</body>
+</html>
